@@ -67,7 +67,7 @@ Sections.TemplatesEdit = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/symbol/add',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/symbol/add',
 			success: this.binded_onSymbolAdded
 		})
 	},
@@ -83,7 +83,7 @@ Sections.TemplatesEdit = Class.inherit({
 
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/get',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/get',
 			success: this.binded_onLoadTemplaet
 
 		})
@@ -171,7 +171,7 @@ Sections.TemplatesEdit = Class.inherit({
 
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/symbol/get',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/symbol/get',
 			success: this.binded_onTemplateSymbolsLoaded
 		});
 	},
@@ -222,7 +222,7 @@ Sections.TemplatesEdit = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/symbol/del',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/symbol/del',
 			success: this.binded_onSymbolDeleted
 		})
 

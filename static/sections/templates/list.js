@@ -49,7 +49,7 @@ Sections.TemplatesList = Class.inherit({
 
 		AJAX.create({
 			type: 'json',
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/get',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/get',
 			success: this.binded_onLoadTemplates
 		});
 	},
@@ -91,7 +91,7 @@ Sections.TemplatesList = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/add',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/add',
 			success: this.binded_onTemplateAdded
 		})
 	},
@@ -113,7 +113,7 @@ Sections.TemplatesList = Class.inherit({
 
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/symbol_templates/del',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/symbol_templates/del',
 			success: this.binded_onTemplateDeleted
 		})
 

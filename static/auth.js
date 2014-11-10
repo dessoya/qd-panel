@@ -51,7 +51,7 @@ Auth = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/auth/login',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/auth/login',
 			success: function(answer) {
 				// console.log(answer);
 				if(answer.status === 'ok') {
@@ -97,7 +97,7 @@ Auth = Class.inherit({
 
 		AJAX.create({
 			type: 'json',
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/auth/logout',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/auth/logout',
 			success: function(answer) {
 				auth.show();
 			}

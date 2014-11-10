@@ -126,7 +126,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 
 		AJAX.create({
 			type: 'json',
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/rules/hint',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/rules/hint',
 			success: this.binded_onRulesHintLoaded
 		})
 	},
@@ -204,7 +204,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 			}
 			this.resources.operations = operations;
 		}
-		return this.resources.operations[operation_id];
+		return operation_id in this.resources.operations ? this.resources.operations[operation_id] : {id:0,name:''};
 	},
 
 	getTemplate: function(template_id) {
@@ -355,7 +355,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify({ rule_type: 'bb' }),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/rules/get',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/rules/get',
 			success: this.binded_onRulesLoaded
 		})
 	},
@@ -402,7 +402,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify(params),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/rules/add',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/rules/add',
 			success: this.binded_onRuleAdded
 		})
 
@@ -417,7 +417,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 		AJAX.create({
 			type: 'json',
 			post: JSON.stringify({ rule_id: rule_id, sync: true }),
-			url: 'http://'+config.qd.host+':'+config.qd.port+'/rules/del',
+			url: 'http://'+config.qd.host+':'+config.qd.port+config.qd.prefix+'/rules/del',
 			success: this.binded_onRuleDeleted
 		})
 
