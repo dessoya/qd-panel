@@ -1,0 +1,31 @@
+{
+	"mysql": {
+		"connectionLimit": 10,
+		"host": "192.168.88.101",
+		"user": "qd-panel",
+		"password": "qd-panel",
+		"database": "qd-panel"
+	},
+
+	"mysql_bridge": {
+		"connectionLimit": 10,
+		"host": "127.0.0.1",
+		"port": 3310,
+		"user": "root",
+		"password": "RbfxDev12",
+		"database": "bridged"
+	},
+
+	"apiserver": {
+		"port": 11000
+	},
+
+	"object_types": [
+		"symbol_template",
+		"rule"
+	],
+
+	"auth": {
+		"cookie": "qdauth"
+	}
+}

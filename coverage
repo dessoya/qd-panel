@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# place this lines in ~/.bashrc
+export QD_COVER_DIR=/home/cover
+export QD_DIR=/home/qd
+
+istanbul cover --dir=$QD_COVER_DIR _mocha -- -R spec \
+$QD_DIR/test/*.js

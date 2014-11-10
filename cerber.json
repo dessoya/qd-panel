@@ -1,0 +1,6 @@
+{
+	"name":								"qd",
+	"sub_process_communication_port":	6300,
+	"logs_dir":							"/var/log/qd",
+	"daemon_user":						"qd"
+}

@@ -1,0 +1,63 @@
+body, button, input, select, option {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
+	font-size: 12px;
+}
+
+select {
+	height: 24px;
+}
+
+.fl { float: left }
+.fr { float: right }
+.cb { clear: both }
+
+.w10 { width: 10px }
+.w20 { width: 20px }
+.w24 { width: 24px }
+.w35 { width: 35px }
+.w50 { width: 50px }
+.w70 { width: 70px }
+.w80 { width: 80px }
+.w89 { width: 89px }
+.w90 { width: 90px }
+.w100 { width: 100px }
+.w109 { width: 109px }
+.w150 { width: 150px }
+.w200 { width: 200px }
+
+.h18 { height: 18px; line-height: 18px }
+.header { font-weight: bold; background: #aaa }
+
+.cell { border-right: 1px solid black }
+.cell, .lastcell {
+	padding: 1px 4px;
+}
+
+.cell a, .lastcell a, .rm5 {
+	margin-right: 5px;
+}
+
+.row .cell,
+.row .lastcell
+{
+	border-bottom: 1px solid black;
+}
+
+.trigger {
+	border: 1px solid black;
+	background: #aaa;
+	padding: 2px 5px;
+	cursor:pointer;
+}
+
+.trigger .on {
+	display: none;
+}
+
+.trigger.on {
+	background: #6a6;
+}
+
+.trigger.on .on {
+	display: block;
+}
