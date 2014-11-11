@@ -301,7 +301,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 			html += '<div class="fl w150 rm5">&nbsp;</div>';
 			html += '<div class="fl w150 rm5">&nbsp;operation</div>';
 			html += '<div class="fl w150 rm5">&nbsp;template</div>';
-			html += '<div class="fl w150 rm5">&nbsp;feedor</div>';
+			html += '<div class="fl w150 rm5">&nbsp;feeder</div>';
 			
 			html += '<div class="cb"></div>';
 		html += '</div>';
