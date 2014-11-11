@@ -31,19 +31,6 @@ function create(config) {
 	, require('./requests/rules/get.js')
 	, require('./requests/rules/del.js')
 
-	/*
-	{
-
-		, '/rules/hint': require('./requests/rules/hint.js')
-		, '/rules/add': require('./requests/rules/add.js')
-		, '/rules/get': require('./requests/rules/get.js')
-		, '/rules/del': require('./requests/rules/del.js')
-
-		, '/auth/login': require('./requests/auth/login.js')
-		, '/auth/logout': require('./requests/auth/logout.js')
-
-	}
-	*/
 	)
 
 	return httpserver

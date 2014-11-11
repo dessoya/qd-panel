@@ -6,7 +6,7 @@ var APIRequest		= require(require('cerber').daemonPath + '/APIRequest.js')
 
 module.exports = APIRequest.inherit({
 
-    route: '/auth/logout',
+    route: config.apiserver.prefix+'/auth/logout',
 
 	need_auth: false,
 

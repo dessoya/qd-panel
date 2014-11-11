@@ -18,6 +18,8 @@ var APIServer			= require('./APIServer.js')
 var gen_init = coroutine(function*(g) {
 
 	global.config = JSON.parse(yield fs.readFile(cerber.daemonPath + '/qd-panel.config.json', g.resume))
+	global.config = global.config[process.env.QD_BRANCH ? process.env.QD_BRANCH : 'trunk']
+	console.dir(config)
 	
 	global.mysqlpool = mysql.createPool(config.mysql)
 

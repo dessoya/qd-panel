@@ -6,7 +6,7 @@ var APIRequest		= require(require('cerber').daemonPath + '/APIRequest.js')
 
 module.exports = APIRequest.inherit({
 
-    route: '/symbol_templates/add',
+    route: config.apiserver.prefix+'/symbol_templates/add',
 
 	gen_process: coroutine(function*(data, request, g) {
 
