@@ -172,7 +172,9 @@ Sections.Bridge.ClassicRules = Class.inherit({
 
 		html += '<div>';
 			html += '<div class="fl h18 w24 '+(last ? 'img1' : 'img2')+'">&nbsp;</div>';
-			html += '<div class="fl h18 w150">'+(this.re_login.exec(login.login) ? 'login':'group')+': <b>' + login.login + '</b></div>';
+			// html += '<div class="fl h18 w150">'+(this.re_login.exec(login.login) ? 'login':'group')+': <b>' + login.login + '</b></div>';
+			html += '<div class="fl h18 w200">'+(this.re_login.exec(login.login) ? 'login':'group')+': <b>' + login.login + '</b> <a href="#bridge/cls_rules/raw/'+login.login+'">raw data</a></div>';
+
 			html += '<div class="cb"></div>';
 		html += '</div>';
 

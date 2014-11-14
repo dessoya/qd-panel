@@ -2,7 +2,7 @@
 
 # place this lines in ~/.bashrc
 export QD_COVER_DIR=/home/cover
-export QD_DIR=/home/qd
+export QD_DIR=/home/qd-panel
 
 istanbul cover --dir=$QD_COVER_DIR _mocha -- -R spec \
 $QD_DIR/test/*.js

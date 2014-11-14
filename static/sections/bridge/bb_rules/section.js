@@ -254,7 +254,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 
 		html += '<div>';
 			html += '<div class="fl h18 w24 '+(last ? 'img1' : 'img2')+'">&nbsp;</div>';
-			html += '<div class="fl h18 w100">'+(this.re_login.exec(login.login) ? 'login':'group')+': <b>' + login.login + '</b></div>';
+			html += '<div class="fl h18 w200">'+(this.re_login.exec(login.login) ? 'login':'group')+': <b>' + login.login + '</b> <a href="#bridge/bb_rules/raw/'+login.login+'">raw data</a></div>';
 			html += '<div class="cb"></div>';
 		html += '</div>';
 

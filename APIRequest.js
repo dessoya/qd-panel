@@ -66,7 +66,6 @@ module.exports = Phoenix.Request.inherit({
 		    	for(var i = 0, l = rows.length; i < l; i++) {
 		    		request.rights[rows[i].operation] = true
 		    	}
-		    	// console.dir(request.rights)
 			}
 			else {
 				answer = { status: "error", error: "not logged" }

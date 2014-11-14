@@ -30,6 +30,8 @@ function create(config) {
 	, require('./requests/rules/add.js')
 	, require('./requests/rules/get.js')
 	, require('./requests/rules/del.js')
+	, require('./requests/rules/bb_raw.js')
+	, require('./requests/rules/cls_raw.js')
 
 	/*
 	{
