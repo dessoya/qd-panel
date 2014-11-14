@@ -1,31 +1,65 @@
 {
-	"mysql": {
-		"connectionLimit": 10,
-		"host": "192.168.88.101",
-		"user": "qd-panel",
-		"password": "qd-panel",
-		"database": "qd-panel"
+	"trunk": {
+		"mysql": {
+			"connectionLimit": 10,
+			"host": "192.168.88.101",
+			"user": "qd-panel",
+			"password": "qd-panel",
+			"database": "qd-panel"
+		},
+
+		"mysql_bridge": {
+			"connectionLimit": 10,
+			"host": "127.0.0.1",
+			"port": 3310,
+			"user": "root",
+			"password": "RbfxDev12",
+			"database": "bridged"
+		},
+
+		"apiserver": {
+			"port": 11000
+		},
+
+		"object_types": [
+			"symbol_template",
+			"rule"
+		],
+
+		"auth": {
+			"cookie": "qdauth"
+		}
 	},
 
-	"mysql_bridge": {
-		"connectionLimit": 10,
-		"host": "127.0.0.1",
-		"port": 3310,
-		"user": "root",
-		"password": "RbfxDev12",
-		"database": "bridged"
-	},
+	"dev": {
+		"mysql": {
+			"connectionLimit": 10,
+			"host": "127.0.0.1",
+			"user": "root",
+			"password": "RbfxDev12",
+			"database": "qd-panel"
+		},
 
-	"apiserver": {
-		"port": 11000
-	},
+		"mysql_bridge": {
+			"connectionLimit": 10,
+			"host": "127.0.0.1",
+			"user": "root",
+			"password": "RbfxDev12",
+			"database": "bridged"
+		},
 
-	"object_types": [
-		"symbol_template",
-		"rule"
-	],
+		"apiserver": {
+			"port": 11000,
+			"prefix": "/qdpanel-api"
+		},
 
-	"auth": {
-		"cookie": "qdauth"
+		"object_types": [
+			"symbol_template",
+			"rule"
+		],
+
+		"auth": {
+			"cookie": "qdauth"
+		}
 	}
 }

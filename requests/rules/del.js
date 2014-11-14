@@ -6,7 +6,7 @@ var APIRequest		= require(require('cerber').daemonPath + '/APIRequest.js')
 
 module.exports = APIRequest.inherit({
 
-    route: '/rules/del',
+    route: config.apiserver.prefix+'/rules/del',
 
 	gen_process: coroutine(function*(data, request, g) {
 
