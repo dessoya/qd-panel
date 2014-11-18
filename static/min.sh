@@ -59,9 +59,10 @@ java -jar ./compiler.jar ./sections/bridge/bb_rules/raw/section.js --jscomp_off=
 echo "19/$TOTAL sections/bridge/cls_rules/raw/section"
 java -jar ./compiler.jar ./sections/bridge/cls_rules/raw/section.js --jscomp_off=globalThis > ./min/sections_bridge_cls_rules_raw_section.js
 
-cat ./min/config.js ./min/md5.js ./min/cookie.js ./min/Class.js ./min/AJAX.js ./min/auth.js ./min/Sections.js ./min/BreadCrumbs.js ./min/sections_qservers_section.js ./min/sections_bridge_section.js \
-./min/sections_bridge_bb_rules_section.js ./min/sections_bridge_cls_rules_section.js ./min/sections_templates_list.js ./min/sections_templates_edit.js ./min/TopMenu.js \
-./min/LoginExistHelper.js ./min/sections_bridge_bb_rules_raw_section.js \
-./min/sections_bridge_cls_rules_raw_section.js ./min/index.js > ./all.min.js
+cat ./min/config.js ./min/md5.js ./min/cookie.js ./min/Class.js ./min/AJAX.js ./min/TopMenu.js ./min/auth.js ./min/Sections.js ./min/BreadCrumbs.js ./min/sections_qservers_section.js ./min/sections_bridge_section.js \
+./min/LoginExistHelper.js ./min/sections_templates_list.js ./min/sections_templates_edit.js ./min/index.js \
+./min/sections_bridge_bb_rules_section.js ./min/sections_bridge_cls_rules_section.js ./min/sections_bridge_bb_rules_raw_section.js ./min/sections_bridge_cls_rules_raw_section.js > ./all.min.js
 
-rm -rf ./min
+# rm -rf ./min
+
+

@@ -284,7 +284,6 @@ Sections.Bridge.ClassicRules = Class.inherit({
 		html += '<div>';
 			html += '<div class="fl w150 rm5">&nbsp;</div>';
 			html += '<div class="fl w150 rm5" id="login_error">&nbsp;</div>';
-
 			html += '<div class="cb"></div>';
 		html += '</div>';
 

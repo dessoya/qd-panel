@@ -1,5 +1,5 @@
 
-LoginExistHelper = Class.inherit({
+window.LoginExistHelper = Class.inherit({
 
 	onCreate: function() {
 		this.binded_onKeyTimer = this.onKeyTimer.bind(this);
@@ -35,4 +35,5 @@ LoginExistHelper = Class.inherit({
 			});
 		}
 	}
-})
+
+});
