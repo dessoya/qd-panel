@@ -18,6 +18,8 @@ function create(config) {
 	, require('./requests/auth/login.js')
 	, require('./requests/auth/logout.js')
 
+	, require('./requests/login/has.js')
+
 	, require('./requests/symbol_templates/get.js')
 	, require('./requests/symbol_templates/add.js')
 	, require('./requests/symbol_templates/del.js')

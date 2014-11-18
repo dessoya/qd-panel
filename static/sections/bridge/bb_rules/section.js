@@ -36,6 +36,8 @@ Sections.Bridge.BBRUles = Class.inherit({
 
 	onCreate: function() {
 
+	    this.lh = LoginExistHelper.create();
+		
 		this.binded_onRulesHintLoaded = this.onRulesHintLoaded.bind(this);
 		this.binded_onRulesLoaded = this.onRulesLoaded.bind(this);
 		this.binded_onRuleAdded = this.onRuleAdded.bind(this);
@@ -132,6 +134,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 	},
 
 	deactivate: function() {
+		this.lh.destroy();
 	},
 
 	onRulesLoaded: function(answer) {
@@ -308,7 +311,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 
 		html += '<div>';
 
-			html += '<select onchange="section.commonAddChanger()" class="fl w150 rm5" id="input_source">';
+			html += '<select onchange="section.commonAddChanger();section.lh.onKeyup(input_login)" class="fl w150 rm5" id="input_source">';
 				html += '<option value="0" selected="selected">*required*</option>';
 				for(var i = 0, c = answer.result.sources, l = c.length; i < l; i++) {
 				var source = c[i];
@@ -316,7 +319,7 @@ Sections.Bridge.BBRUles = Class.inherit({
 				}
 			html += '</select>';
 
-			html += '<input onkeyup="section.commonAddChanger()" class="fl w150 rm5" type="text" placeholder="login or group" id="input_login" />';
+			html += '<input onkeyup="section.commonAddChanger();section.lh.onKeyup(input_login)" class="fl w150 rm5" type="text" placeholder="login or group" id="input_login" />';
 
 			html += '<select class="fl w150 rm5" id="input_operation_event">';
 				for(var i = 0, c = answer.result.operations, l = c.length; i < l; i++) {
@@ -342,6 +345,13 @@ Sections.Bridge.BBRUles = Class.inherit({
 			html += '</select>';
 
 			html += '<button disabled="disabled" class="fl w5" id="control_common_add" onclick="section.addCommonTemplate()">add</button>';
+
+			html += '<div class="cb"></div>';
+		html += '</div>';
+
+		html += '<div>';
+			html += '<div class="fl w150 rm5">&nbsp;</div>';
+			html += '<div class="fl w150 rm5" id="login_error">&nbsp;</div>';
 
 			html += '<div class="cb"></div>';
 		html += '</div>';

@@ -18,7 +18,8 @@
 		},
 
 		"apiserver": {
-			"port": 11000
+			"port": 11000,
+			"prefix": ""
 		},
 
 		"object_types": [
@@ -28,6 +29,13 @@
 
 		"auth": {
 			"cookie": "qdauth"
+		},
+
+		"services": {
+			"mt4": {
+				"host": "82.145.47.93",
+				"port": 10080
+			}
 		}
 	},
 

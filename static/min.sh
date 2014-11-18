@@ -1,7 +1,7 @@
 rm -rf ./min
 mkdir ./min
 
-TOTAL=16
+TOTAL=19
 echo " 1/$TOTAL config"
 java -jar ./compiler.jar ./config.js --jscomp_off=globalThis > ./min/config.js
 
@@ -50,7 +50,18 @@ java -jar ./compiler.jar ./TopMenu.js --jscomp_off=globalThis > ./min/TopMenu.js
 echo "16/$TOTAL index"
 java -jar ./compiler.jar ./index.js --jscomp_off=globalThis > ./min/index.js
 
+echo "17/$TOTAL LoginExistHelper"
+java -jar ./compiler.jar ./LoginExistHelper.js --jscomp_off=globalThis > ./min/LoginExistHelper.js
+
+echo "18/$TOTAL sections/bridge/bb_rules/raw/section"
+java -jar ./compiler.jar ./sections/bridge/bb_rules/raw/section.js --jscomp_off=globalThis > ./min/sections_bridge_bb_rules_raw_section.js
+
+echo "19/$TOTAL sections/bridge/cls_rules/raw/section"
+java -jar ./compiler.jar ./sections/bridge/cls_rules/raw/section.js --jscomp_off=globalThis > ./min/sections_bridge_cls_rules_raw_section.js
+
 cat ./min/config.js ./min/md5.js ./min/cookie.js ./min/Class.js ./min/AJAX.js ./min/auth.js ./min/Sections.js ./min/BreadCrumbs.js ./min/sections_qservers_section.js ./min/sections_bridge_section.js \
-./min/sections_bridge_bb_rules_section.js ./min/sections_bridge_cls_rules_section.js ./min/sections_templates_list.js ./min/sections_templates_edit.js ./min/TopMenu.js ./min/index.js > ./all.min.js
+./min/sections_bridge_bb_rules_section.js ./min/sections_bridge_cls_rules_section.js ./min/sections_templates_list.js ./min/sections_templates_edit.js ./min/TopMenu.js \
+./min/LoginExistHelper.js ./min/sections_bridge_bb_rules_raw_section.js \
+./min/sections_bridge_cls_rules_raw_section.js ./min/index.js > ./all.min.js
 
 rm -rf ./min
