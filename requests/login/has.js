@@ -11,7 +11,7 @@ var api_port_re = /api_port=(\d+)/
 
 module.exports = APIRequest.inherit({
 
-    route: '/login/has',
+    route: config.apiserver.prefix+'/login/has',
 
 	need_auth: false,
 
